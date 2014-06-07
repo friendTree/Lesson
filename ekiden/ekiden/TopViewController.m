@@ -18,8 +18,19 @@
 
 - (void)viewDidLoad
 {
+    // ツイートボタン
+    UIButton *tweetButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    tweetButton.frame = CGRectMake(100, 100, 100, 100);
+    [tweetButton setTitle:@"卓球したい" forState:UIControlStateNormal];
+    [tweetButton addTarget:self action:@selector(tweetButtonToch) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:tweetButton];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+-(void)tweetButtonToch
+{
+    
 }
 
 - (void)didReceiveMemoryWarning

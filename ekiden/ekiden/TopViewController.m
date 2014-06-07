@@ -28,7 +28,7 @@
     // ツイッターアカウントを取得
     ACAccountStore *store = [[ACAccountStore alloc]init];
     ACAccountType *twitterType = [store accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
-    void (^__block accountBlock)(BOOL, NSError*) = ^(BOOL granted, NSError* error) {
+    [store requestAccessToAccountsWithType:twitterType withCompletionHandler:^(BOOL granted, NSError *error) {
         if (granted) {
             
             // Twitterは複数アカウントでログイン可能の為、結果がArrayで返ってきます。
@@ -37,12 +37,9 @@
             if (accounts.count == 0) {
                 UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"アカウント情報がありません" message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
                 [alert show];
-            };
-        };
-    [store requestAccessToAccountsWithType:twitterType
-                                          options:nil
-                                       completion:accountBlock ];
-    };
+            }
+        }
+    }];
 }
 
 -(void)tweetButtonToch

@@ -10,16 +10,41 @@
 
 @interface TopViewController ()
 
-@property UIButton *switchButton;
-
 @end
 
 @implementation TopViewController
 
 - (void)viewDidLoad
 {
+    // ツイートボタン
+    UIButton *tweetButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    tweetButton.frame = CGRectMake(100, 100, 100, 100);
+    [tweetButton setTitle:@"卓球したい" forState:UIControlStateNormal];
+    [tweetButton addTarget:self action:@selector(tweetButtonToch) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:tweetButton];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    // ツイッターアカウントを取得
+    ACAccountStore *store = [[ACAccountStore alloc]init];
+    ACAccountType *twitterType = [store accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
+    [store requestAccessToAccountsWithType:twitterType withCompletionHandler:^(BOOL granted, NSError *error) {
+        if (granted) {
+            
+            // Twitterは複数アカウントでログイン可能の為、結果がArrayで返ってきます。
+            NSArray* accounts = [store accountsWithAccountType:twitterType];
+            
+            if (accounts.count == 0) {
+                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"アカウント情報がありません" message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+                [alert show];
+            }
+        }
+    }];
+}
+
+-(void)tweetButtonToch
+{
+    
 }
 
 - (void)didReceiveMemoryWarning

@@ -20,6 +20,8 @@
 		FFE61752193AAC46004EF657 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFE61734193AAC46004EF657 /* UIKit.framework */; };
 		FFE6175A193AAC46004EF657 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FFE61758193AAC46004EF657 /* InfoPlist.strings */; };
 		FFE6175C193AAC46004EF657 /* ekidenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE6175B193AAC46004EF657 /* ekidenTests.m */; };
+		FFE617661942CBA2004EF657 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFE617651942CBA2004EF657 /* Twitter.framework */; };
+		FFE617681942CBB0004EF657 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFE617671942CBB0004EF657 /* Accounts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		FFE61757193AAC46004EF657 /* ekidenTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ekidenTests-Info.plist"; sourceTree = "<group>"; };
 		FFE61759193AAC46004EF657 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FFE6175B193AAC46004EF657 /* ekidenTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ekidenTests.m; sourceTree = "<group>"; };
+		FFE617651942CBA2004EF657 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		FFE617671942CBB0004EF657 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFE617681942CBB0004EF657 /* Accounts.framework in Frameworks */,
+				FFE617661942CBA2004EF657 /* Twitter.framework in Frameworks */,
 				FFE61733193AAC46004EF657 /* CoreGraphics.framework in Frameworks */,
 				FFE61735193AAC46004EF657 /* UIKit.framework in Frameworks */,
 				FFE61731193AAC46004EF657 /* Foundation.framework in Frameworks */,
@@ -99,6 +105,8 @@
 		FFE6172F193AAC46004EF657 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FFE617671942CBB0004EF657 /* Accounts.framework */,
+				FFE617651942CBA2004EF657 /* Twitter.framework */,
 				FFE61730193AAC46004EF657 /* Foundation.framework */,
 				FFE61732193AAC46004EF657 /* CoreGraphics.framework */,
 				FFE61734193AAC46004EF657 /* UIKit.framework */,
@@ -448,6 +456,7 @@
 				FFE61761193AAC46004EF657 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FFE61762193AAC46004EF657 /* Build configuration list for PBXNativeTarget "ekidenTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +465,7 @@
 				FFE61764193AAC46004EF657 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

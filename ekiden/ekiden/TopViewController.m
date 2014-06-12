@@ -9,6 +9,7 @@
 #import "TopViewController.h"
 
 @interface TopViewController ()
+@property NSArray *account;
 
 @end
 
@@ -32,9 +33,9 @@
         if (granted) {
             
             // Twitterは複数アカウントでログイン可能の為、結果がArrayで返ってきます。
-            NSArray* accounts = [store accountsWithAccountType:twitterType];
+            _account = [store accountsWithAccountType:twitterType];
             
-            if (accounts.count == 0) {
+            if (_account.count == 0) {
                 UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"アカウント情報がありません" message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
                 [alert show];
             }
@@ -44,7 +45,14 @@
 
 -(void)tweetButtonToch
 {
+    NSURL *postUrl = [NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/update.json"];
+    NSDictionary *twDictionary = [NSDictionary dictionaryWithObject:@"卓球したい" forKey:@"status"];
+    SLRequest *twRequest = [SLRequest requestForServiceType:SLServiceTypeTwitter requestMethod:SLRequestMethodPOST URL:postUrl parameters:twDictionary];
     
+    [twRequest setAccount:[_account objectAtIndex:0]];
+    [twRequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse ,NSError *error ) {
+    
+    }];
 }
 
 - (void)didReceiveMemoryWarning

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF0B81511949CD890003FAAD /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF0B81501949CD890003FAAD /* Social.framework */; };
 		FFE61731193AAC46004EF657 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFE61730193AAC46004EF657 /* Foundation.framework */; };
 		FFE61733193AAC46004EF657 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFE61732193AAC46004EF657 /* CoreGraphics.framework */; };
 		FFE61735193AAC46004EF657 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFE61734193AAC46004EF657 /* UIKit.framework */; };
@@ -20,7 +21,6 @@
 		FFE61752193AAC46004EF657 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFE61734193AAC46004EF657 /* UIKit.framework */; };
 		FFE6175A193AAC46004EF657 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FFE61758193AAC46004EF657 /* InfoPlist.strings */; };
 		FFE6175C193AAC46004EF657 /* ekidenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE6175B193AAC46004EF657 /* ekidenTests.m */; };
-		FFE617661942CBA2004EF657 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFE617651942CBA2004EF657 /* Twitter.framework */; };
 		FFE617681942CBB0004EF657 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFE617671942CBB0004EF657 /* Accounts.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FF0B81501949CD890003FAAD /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		FFE6172D193AAC46004EF657 /* ekiden.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ekiden.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE61730193AAC46004EF657 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FFE61732193AAC46004EF657 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,8 +63,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF0B81511949CD890003FAAD /* Social.framework in Frameworks */,
 				FFE617681942CBB0004EF657 /* Accounts.framework in Frameworks */,
-				FFE617661942CBA2004EF657 /* Twitter.framework in Frameworks */,
 				FFE61733193AAC46004EF657 /* CoreGraphics.framework in Frameworks */,
 				FFE61735193AAC46004EF657 /* UIKit.framework in Frameworks */,
 				FFE61731193AAC46004EF657 /* Foundation.framework in Frameworks */,
@@ -105,6 +106,7 @@
 		FFE6172F193AAC46004EF657 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FF0B81501949CD890003FAAD /* Social.framework */,
 				FFE617671942CBB0004EF657 /* Accounts.framework */,
 				FFE617651942CBA2004EF657 /* Twitter.framework */,
 				FFE61730193AAC46004EF657 /* Foundation.framework */,

@@ -32,6 +32,8 @@
     [store requestAccessToAccountsWithType:twitterType withCompletionHandler:^(BOOL granted, NSError *error) {
         if (granted) {
             
+            
+            
             // Twitterは複数アカウントでログイン可能の為、結果がArrayで返ってきます。
             _account = [store accountsWithAccountType:twitterType];
             
